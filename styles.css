@@ -1,0 +1,127 @@
+:root {
+  color-scheme: light;
+  font-family: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --page-bg: #f4f6f9;
+  --panel-bg: #ffffff;
+  --text-main: #121417;
+  --text-muted: #5c6574;
+  --brand: #c3002f;
+  --shadow-soft: 0 15px 40px rgba(15, 23, 42, 0.1);
+  --radius-lg: 1.25rem;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: radial-gradient(circle at top, #ffffff, var(--page-bg) 60%);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 2.5rem 1rem 3rem;
+}
+
+.page {
+  width: min(960px, 100%);
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.page__header {
+  text-align: center;
+  padding: 0 1rem;
+}
+
+.page__eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 0.72rem;
+  color: var(--brand);
+  font-weight: 600;
+  margin: 0 0 0.25rem;
+}
+
+.page__title {
+  font-size: clamp(1.9rem, 4vw, 2.6rem);
+  color: var(--text-main);
+  margin: 0 0 0.5rem;
+}
+
+.page__hint {
+  color: var(--text-muted);
+  margin: 0 auto;
+  max-width: 520px;
+  line-height: 1.5;
+}
+
+.certificate-panel {
+  background: var(--panel-bg);
+  border-radius: var(--radius-lg);
+  padding: 1.25rem 1.25rem 1.75rem;
+  box-shadow: var(--shadow-soft);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.certificate-panel__frame {
+  width: 100%;
+  background: linear-gradient(135deg, #fdfdfd, #f3f6fb);
+  border-radius: calc(var(--radius-lg) - 0.25rem);
+  padding: clamp(0.65rem, 2vw, 1.2rem);
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.04);
+}
+
+.certificate-panel__frame img {
+  width: 100%;
+  display: block;
+  border-radius: calc(var(--radius-lg) - 0.5rem);
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.18);
+  background-color: #fff;
+}
+
+.certificate-panel__source {
+  font-size: 0.92rem;
+  color: var(--text-muted);
+  margin: 0;
+  text-align: center;
+}
+
+.certificate-panel__source span {
+  color: var(--text-main);
+  font-weight: 600;
+}
+
+.certificate-panel__error {
+  min-height: 1.25rem;
+  font-size: 0.9rem;
+  color: #c62828;
+  margin: 0;
+  text-align: center;
+}
+
+@media (max-width: 640px) {
+  body {
+    padding: 1.5rem 1rem 2rem;
+  }
+
+  .certificate-panel {
+    padding: 1rem;
+  }
+
+  .certificate-panel__frame {
+    padding: 0.5rem;
+  }
+
+  .page__hint {
+    font-size: 0.95rem;
+  }
+}
+

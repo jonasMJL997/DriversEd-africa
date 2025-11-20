@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <meta
+      name="description"
+      content="Public DriversEd certificate viewer for Zodwa Ncube."
+    />
+    <title>DriversEd Certificate</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <main class="page">
+      <header class="page__header">
+        <p class="page__eyebrow">Certificate viewer</p>
+        <h1 class="page__title">DriversEd Certificate</h1>
+        <p class="page__hint">
+          Share this page or link it to a QR code to verify the driver’s result
+          without needing to sign in.
+        </p>
+      </header>
+
+      <section class="certificate-panel" aria-live="polite">
+        <div class="certificate-panel__frame">
+          <img
+            id="certificateImage"
+            src="assets/certificate_zodwa_ncube.jpg"
+            alt="DriversEd certificate for Zodwa Ncube"
+            loading="lazy"
+            decoding="async"
+            draggable="false"
+          />
+        </div>
+        <p class="certificate-panel__source">
+          Showing image from
+          <span id="certificateSource">assets/certificate_zodwa_ncube.jpg</span>
+        </p>
+        <p class="certificate-panel__error" role="status" aria-live="assertive">
+          <!-- Updated via JS when an image fails to load -->
+        </p>
+      </section>
+    </main>
+  </body>
+</html>
+
